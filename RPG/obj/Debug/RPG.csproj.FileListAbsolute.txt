@@ -1,0 +1,6 @@
+c:\users\laten\documents\visual studio 2015\Projects\RPG\RPG\obj\Debug\RPG.csprojResolveAssemblyReference.cache
+C:\Users\Laten\documents\visual studio 2015\Projects\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Users\Laten\documents\visual studio 2015\Projects\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\Laten\documents\visual studio 2015\Projects\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\Laten\documents\visual studio 2015\Projects\RPG\RPG\obj\Debug\RPG.exe
+C:\Users\Laten\documents\visual studio 2015\Projects\RPG\RPG\obj\Debug\RPG.pdb
