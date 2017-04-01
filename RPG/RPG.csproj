@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character\Actions.cs" />
     <Compile Include="Character\Character.cs" />
+    <Compile Include="Framework\Battle.cs" />
+    <Compile Include="Helper\Character_Creator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weapon\Weapon.cs" />

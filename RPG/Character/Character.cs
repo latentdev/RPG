@@ -15,19 +15,26 @@ namespace RPG.Character
 
     interface iCharacter
     {
-        string attack();
+        string name { get; set; }
+        string title { get; set; }
+        int hp { get; set; }
+        int strength { get; set; }
+        int dex { get; set; }
+        iWeapon weapon { get; set; }
+
+        int attack();
         string block();
         string evade();
     }
 
     class Character:iCharacter
     {
-        public string name;
-        public string title;
-        public int hp;
-        public int strength;
-        public int dex;
-        public iWeapon weapon;
+        public string name { get; set; }
+        public string title { get; set; }
+        public int hp { get; set; }
+        public int strength { get; set; }
+        public int dex { get; set; }
+        public iWeapon weapon { get; set; }
 
         public Character()
         {
@@ -38,9 +45,10 @@ namespace RPG.Character
             dex = 0;
             weapon = new Dagger();
         }
-        public string attack()
+        public int attack()
         {
-            return title + " " + name + " " + weapon.attack();
+            Console.WriteLine(title + " " + name + " " + weapon.attack());
+            return weapon.damage;
         }
 
         public string block()

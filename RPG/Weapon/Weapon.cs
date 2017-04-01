@@ -8,13 +8,14 @@ namespace RPG.Weapon
 {
     interface iWeapon
     {
+        int damage { get; set; }
         string attack();
         string block();
     }
     class Weapon : iWeapon
     { 
         public string name;
-        public int damage=0;
+        public int damage { get; set; }
         public string material;
 
         public Weapon()
