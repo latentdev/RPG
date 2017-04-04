@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG.Dice;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,24 +9,30 @@ namespace RPG.Weapon
 {
     interface iWeapon
     {
-        int damage { get; set; }
-        string attack();
+        string name { get; set; }
+        iDice damage { get; set; }
+        string material { get; set; }
+        string type { get; set; }
+        int attack(int mod);
         string block();
     }
     class Weapon : iWeapon
     { 
-        public string name;
-        public int damage { get; set; }
-        public string material;
+        public string name { get; set; }
+        public iDice damage { get; set; }
+        public string material { get; set; }
+        public string type { get; set; }
 
         public Weapon()
         {
-            damage = 0;
+            damage = new D4();
         }
 
-        public string attack()
+        public int attack(int mod)
         {
-            return "swings "+material + " " + name + " dealing " + damage + " damage";
+            int value = damage.Roll() + mod;
+            Console.WriteLine("swings "+material + " " + name + " dealing " + value + " damage");
+            return value;
         }
 
         public string block()
@@ -38,8 +45,9 @@ namespace RPG.Weapon
         public Axe()
         {
             name = "Axe";
-            damage = 3;
+            damage = new D6();
             material = "Bone";
+            type = "Str";
         }
     }
     class Dagger : Weapon
@@ -47,8 +55,9 @@ namespace RPG.Weapon
         public Dagger()
         {
             name = "Dagger";
-            damage = 2;
+            damage = new D4();
             material = "Iron";
+            type = "Dex";
         }
     }
 
@@ -57,8 +66,9 @@ namespace RPG.Weapon
         public Fists()
         {
             name = "Fists";
-            damage = 1;
+            damage = new D4();
             material = "Bare";
+            type = "Str";
         }
     }
 }
